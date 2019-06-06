@@ -1,0 +1,21 @@
+{
+  "name": "headless-cli",
+  "version": "1.0.0",
+  "description": "headless-cli",
+  "main": "src/index.js",
+  "bin": {
+    "gp": "bin/gp"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "congzhiweiwork@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "inquirer": "^6.3.1",
+    "puppeteer": "^1.9.0",
+    "tinify": "^1.6.0-beta.2"
+  }
+}
