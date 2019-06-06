@@ -39,7 +39,7 @@ const base64ToImg = async (base64str, dir) => {
     }
 }
 
-module.exports = (str, dir) => {
+module.exports = (src, dir) => {
     if(regMap.isPic.test(src)){
         urlToImg(src, dir)
     }else{
