@@ -25,7 +25,7 @@ const urlToImg = promisify((url, dir) => {
 })
 
 const base64ToImg = async (base64str, dir) => {
-    const matchs = base64str.matchs(regMap.isBase64)
+    const matchs = base64str.match(regMap.isBase64)
 
     try{
         const ext = matchs[1].split('/')[1].replace('jpeg', 'jpg')
