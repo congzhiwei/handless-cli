@@ -1,6 +1,6 @@
 {
-  "name": "headless-cli",
-  "version": "1.0.0",
+  "name": "headless-cli-test",
+  "version": "0.0.1",
   "description": "headless-cli",
   "main": "src/index.js",
   "bin": {
