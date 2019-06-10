@@ -7,6 +7,7 @@ const App = require('./app')
 const Clean = require('./clean')
 const ImgMin = require('./imgMin')
 
+
 program
     .version(pkg.version, '-v, --version')
 

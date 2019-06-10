@@ -41,6 +41,7 @@ class App {
                 await page.waitFor(200)
                 await srcToImg(src, this.conf.outputPath)
             })
+            await browser.close();
         })
     }
 }

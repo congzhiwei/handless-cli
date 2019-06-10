@@ -5,6 +5,7 @@ const fs = require('fs')
 const { promisify } = require('util')
 const writeFile = promisify(fs.writeFile)
 const regMap = require('./regMap')
+const chalk = require('chalk')
 
 const urlToImg = promisify((url, dir) => {
     let mod
@@ -18,9 +19,26 @@ const urlToImg = promisify((url, dir) => {
     const file = path.join(dir, `${parseInt(Math.random() * 1000000)}${ext}`)
 
     mod.get(url, res => {
-        res.pipe(fs.createWriteStream(file)).on('finish', () => {
-            console.log(file)
-        })
+        // console.log(chalk.red(file))
+        // res.pipe(fs.createWriteStream(file)).on('finish', () => {
+        //     console.log(file)
+        // })
+        var imgData = "";
+
+        res.setEncoding("binary"); //一定要设置response的编码为binary否则会下载下来的图片打不开
+
+        res.on("data", function(chunk){
+            imgData+=chunk;
+        });
+
+        res.on("end", function(){
+            fs.writeFile(file, imgData, "binary", function(err){
+                if(err){
+                    console.log("down fail");
+                }
+                console.log("down success");
+            });
+        });
     })
 })
 
