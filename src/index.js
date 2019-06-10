@@ -41,7 +41,7 @@ program
     .action(options => {
         let conf = {}
         if(!options.key){
-            console.log(chalk.red(`Please enter your tinypng's key by "gp p -k [key]"`))
+            console.log(chalk.red(`Please enter your tinypng's key by "headless p -k [key]"`))
             return
         }
         options.key && (conf.key = options.key)

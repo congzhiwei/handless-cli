@@ -1,10 +1,10 @@
 {
   "name": "headless-cli-test",
-  "version": "0.0.5",
+  "version": "0.06",
   "description": "headless-cli",
   "main": "src/index.js",
   "bin": {
-    "gp": "bin/gp"
+    "headless": "bin/headless"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
